@@ -1,0 +1,157 @@
+/* 
+
+   $Revision: 1.1.1.1 $ 
+   $Date: 2002/12/20 04:44:28 $
+
+   These are Aaron's stylesheets. They are provided as an example.
+
+   You are welome to use them under the conditions of the terms 
+   outlined below. You should understand,however, that they have 
+   not been tested to work with all browser combinations. They 
+   seem to work ok under Mozilla.
+
+   Copyright (c) 2001-2002 Aaron Straup Cope                           
+   http://www.eatdrinkfeelgood.info
+   
+   Permission to use, copy, modify and distribute this CSS stylesheet
+   and its accompanying documentation for any purpose and without fee 
+   is herby granted in perpetuity, provided that the above copyright 
+   notice and this paragraph appear in all copies.  The copyright holders 
+   make no representation about the suitability of this stylesheet for 
+   any purpose.
+   
+   It is provided "as is" without expressed or implied warranty.
+
+*/
+
+body { 
+       font-family:sans-serif;        
+       width:167px;
+ }
+
+h1 { 
+     margin:0px;
+     padding-bottom:5px;
+ }
+
+h2 { 
+     margin:0px;
+     margin-bottom:10px;
+ }
+
+h3 { 
+     margin:0px;
+     margin-bottom:5px;
+ }
+
+h4 {  
+     margin:0px;
+}
+
+li { 
+     padding-left:0;
+     margin-left:1em;
+ }
+
+ol { 
+     padding-left:0;
+     margin-left:1em;
+ }
+
+p { 
+    margin:0px;
+    margin-bottom:5px;
+ }
+
+ul { 
+     margin-left: 0;
+     padding-left: 2px;
+     padding-right: 2px;
+ }
+
+/* Classes */
+
+.equipment { 
+             border-top: 1px dashed #ccc;                       
+             padding-top:5px;
+             margin-top:5px;
+ }
+
+.extrefs { 
+           display:none;
+ }
+
+.footnote { 
+            display:none;
+            }
+
+.history { 
+           display:none;
+ }
+
+.ingredients-summary { 
+           display:none;
+ }
+
+.meta { 
+        font-family:serif;
+        text-align:left;
+        }
+
+.meta .date { 
+              display:none;
+ }
+
+.notes { 
+         border:solid thin;
+         padding:2px;
+ }
+
+.other-names { 
+               display-none;
+ }
+
+.revhistory { 
+              display:none;
+              }
+
+.time { 
+        border-bottom: 1px dashed #ccc;
+        padding:2px;
+        padding-bottom:5px;
+        margin-bottom:5px;
+ }
+
+.time h4 {  
+           display:inline; 
+           }
+
+.wrapper-directions { 
+                      border:solid thin;
+                      margin-bottom:5px;
+                      padding:2px;
+ }
+
+.wrapper-meta { 
+                padding-bottom:5px;
+ }
+
+.wrapper-meta h2 { 
+                   display:none; 
+                   }
+
+.wrapper-notes { 
+                 clear:both;
+ }
+
+.wrapper-requirements { 
+                      border:solid thin;
+                      margin-bottom:5px;
+                      padding:2px;
+ }
+
+.yield { 
+         border-top: 1px dashed #ccc;                       
+         padding-top:5px;
+         margin-top:5px;
+ }

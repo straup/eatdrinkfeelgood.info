@@ -1,0 +1,26 @@
+
+acronym {
+	border-bottom:1px dotted #ccc;
+}
+
+body {
+     margin:0px;
+     padding:5px;
+}
+
+h1 {
+   color:#adadad;
+}
+
+h2 {
+   color: #ccc;
+}
+
+.license {
+	   border-top:1px dashed #ccc;
+	   margin-top:40px;
+	   padding-top:5px;
+	   font-family:serif;
+	   font-size:11px;
+	   color:#adadad;
+}

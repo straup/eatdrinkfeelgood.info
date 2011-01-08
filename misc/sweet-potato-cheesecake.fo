@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:e="http://www.eatdrinkfeelgood.info/1.1/ns" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <fo:layout-master-set>
+    <fo:simple-page-master page-height="5in" page-width="7in" margin-top="0.5in" margin-bottom="0.5in" margin-left="0.5in" margin-right="0.5in" master-name="default-odd">
+      <fo:region-body region-name="xsl-region-body" margin-bottom="0.5in" column-count="2"/>
+      <fo:region-after region-name="default-after" extent="0.25in"/>
+    </fo:simple-page-master>
+    <fo:simple-page-master page-height="5in" page-width="7in" margin-top="0.5in" margin-bottom="0.5in" margin-left="0.5in" margin-right="0.5in" master-name="default-even" reference-orientation="180">
+      <fo:region-body region-name="xsl-region-body" margin-bottom="0.5in" column-count="2"/>
+      <fo:region-after region-name="default-after" extent="0.25in"/>
+    </fo:simple-page-master>
+    <fo:simple-page-master page-height="5in" page-width="7in" margin-top="0.5in" margin-bottom="0.5in" margin-left="0.5in" margin-right="0.5in" master-name="first">
+      <fo:region-body region-name="xsl-region-body" margin-top="0.5in" column-count="2"/>
+      <fo:region-before region-name="first-before" extent="0.5in"/>
+    </fo:simple-page-master>
+    <fo:page-sequence-master master-name="recipe">
+      <fo:repeatable-page-master-alternatives>
+        <fo:conditional-page-master-reference master-reference="first" page-position="first"/>
+        <fo:conditional-page-master-reference master-reference="default-odd" odd-or-even="even" page-position="rest"/>
+        <fo:conditional-page-master-reference master-reference="default-odd" odd-or-even="odd" page-position="rest"/>
+      </fo:repeatable-page-master-alternatives>
+    </fo:page-sequence-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="recipe">
+    <fo:static-content flow-name="first-before">
+      <fo:block font-size="8pt" font-family="sans-serif" text-align="right" border-bottom-color="black" border-bottom-style="solid">
+        <fo:block font-size="16pt&#10;           ">Galatoire's Sweet Potato Cheesecake</fo:block>
+        <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right"/>
+      </fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="default-after">
+      <fo:block font-size="8pt" font-family="sans-serif" text-align="right" border-top-color="black" border-top-style="solid" border-after-width="0.5mm" padding-before="0.5em">Galatoire's Sweet Potato Cheesecake /<fo:page-number/></fo:block>
+    </fo:static-content>
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block font-family="serif" font-size="8pt">
+        <fo:block break-after="column" start-indent="0.5em">
+          <fo:block space-after="0.5em">
+            <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">
+        Time
+       </fo:block>
+            <fo:block space-after="0.5em">
+              <fo:block>
+	  15 minutes
+     
+	, <fo:inline font-style="italic">
+        preparation
+       </fo:inline></fo:block>
+              <fo:block>
+	  1 hours
+     
+	  15 minutes
+     
+	,
+        <fo:inline font-style="italic">
+        cooking
+       </fo:inline></fo:block>
+            </fo:block>
+          </fo:block>
+          <fo:block space-after="0.5em">
+            <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">
+        Yield
+       </fo:block>
+            <fo:block>
+	<fo:inline>12</fo:inline>
+	
+	  servings
+	
+      </fo:block>
+          </fo:block>
+          <fo:block space-after="0.5em">
+            <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">
+        Source
+       </fo:block>
+            <fo:block>
+	  New York Times
+	  
+        [<fo:inline font-size="0.8em" baseline-shift="super">1</fo:inline>]
+       <fo:block>123456-23434</fo:block></fo:block>
+            <fo:block space-before="0.5em"/>
+          </fo:block>
+          <fo:block font-style="italic" space-before="0.5em" start-indent="0.5em" end-indent="0.5em" color="#666" text-align="justify">
+            <fo:block space-after="0.4em">This is the story of a lovely cheesecake</fo:block>
+            <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right" font-style="normal">bob  
+        [<fo:inline font-size="0.8em" baseline-shift="super">3</fo:inline>]
+       </fo:block>
+          </fo:block>
+        </fo:block>
+        <fo:block break-after="column">
+          <fo:block space-after="0.5em">
+            <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">
+        Ingredients
+       </fo:block>
+            <fo:block space-after="1em">cinnamon, cornstarch, cream cheese, eggs, evaporated milk, nutmeg, sour cream, sugar, sugar, sugar, sweet potatoes, vanilla extract</fo:block>
+            <fo:block start-indent="0.5em" space-after="0.5em">
+              <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right">The crust</fo:block>
+              <fo:list-block>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block><fo:inline font-style="italic">
+       see :
+      </fo:inline>
+	  
+	   Graham Cracker Crust  
+        [<fo:inline font-size="0.8em" baseline-shift="super">2</fo:inline>]
+       
+          
+	 </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+              </fo:list-block>
+            </fo:block>
+            <fo:block start-indent="0.5em" space-after="0.5em">
+              <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right">The filling</fo:block>
+              <fo:list-block>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>3</fo:inline> 
+
+      packages 
+        <fo:inline font-style="italic">3 ounces each</fo:inline>
+	    cream cheese
+	    <fo:inline font-style="italic">softened</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1</fo:inline> 
+
+      cup 
+       
+	    sugar
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1/4</fo:inline> 
+
+      cup 
+       
+	    sugar
+	    <fo:inline font-style="italic">light brown</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1 3/8</fo:inline> 
+
+      cup 
+       
+	    sweet potatoes
+	    <fo:inline font-style="italic">mashed</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>2</fo:inline> 
+
+      large 
+        
+	    eggs
+	    <fo:inline font-style="italic">slightly beaten</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>2/3</fo:inline> 
+
+      cup 
+       
+	    evaporated milk
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>2</fo:inline> 
+
+      tablespoon 
+       
+	    cornstarch
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1/4</fo:inline> 
+
+      teaspoon 
+       
+	    cinnamon
+	    <fo:inline font-style="italic">ground</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1/8</fo:inline> 
+
+      teaspoon 
+       
+	    nutmeg
+	    <fo:inline font-style="italic">ground</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+              </fo:list-block>
+            </fo:block>
+            <fo:block start-indent="0.5em" space-after="0.5em">
+              <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right">The topping</fo:block>
+              <fo:list-block>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>2</fo:inline> 
+
+      cup 
+       
+	    sour cream
+	    <fo:inline font-style="italic">room temperature</fo:inline>
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1/3</fo:inline> 
+
+      cup 
+       
+	    sugar
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item>
+                  <fo:list-item-label>
+                    <fo:block>
+                      <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                    </fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="1.5em">
+                    <fo:block>
+	    <fo:inline>1</fo:inline> 
+
+      teaspoon 
+       
+	    vanilla extract
+	  </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+              </fo:list-block>
+            </fo:block>
+          </fo:block>
+        </fo:block>
+        <fo:block space-after="2em">
+          <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">         
+         Directions
+       </fo:block>
+          <fo:block start-indent="0.5em">
+            <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right">The crust</fo:block>
+            <fo:list-block>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>
+                    <fo:inline font-family="Symbol" color="#ccc">
+        •
+       </fo:inline>
+                  </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block><fo:inline font-style="italic">
+       see :
+      </fo:inline>
+	 
+	  Graham Cracker Crust  
+        [<fo:inline font-size="0.8em" baseline-shift="super">2</fo:inline>]
+       
+         
+        </fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:block>
+          <fo:block start-indent="0.5em">
+            <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right">The filling</fo:block>
+            <fo:list-block space-before="0.7em">
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>1.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	  <fo:block space-after="0.4em">Beat cream cheese with electric mixer until
+	  smooth.</fo:block>
+	</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>2.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	  <fo:block space-after="0.4em">Add sugar and brown sugar, beating until smooth.</fo:block>
+	</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>3.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	  <fo:block space-after="0.4em">Add sweet potatoes, eggs, evaporated milk, cornstarch, cinnamon and nutmeg, beating until well combined. Pour into
+	  crust.</fo:block>
+	</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>4.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	  <fo:block space-after="0.4em">Bake until edge is set, 55 to 60 minutes.</fo:block>
+	</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:block>
+          <fo:block start-indent="0.5em">
+            <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="right">The topping</fo:block>
+            <fo:list-block space-before="0.7em">
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>1.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	  <fo:block space-after="0.4em">Whisk sour cream, sugar and vanilla to combine. Spread
+	  over warm cheesecake.</fo:block>
+        </fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>2.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	 <fo:block space-after="0.4em">Return to oven, and bake until just set, 5 minutes. Cool on wire rack.</fo:block>
+        </fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>3.</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="1.5em">
+                  <fo:block>
+	  <fo:block space-after="0.4em">Remove side of pan, and chill for a few hours or overnight.</fo:block>
+	</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:block>
+        </fo:block>
+        <fo:block>
+          <fo:block space-after="0.5em">
+            <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">         
+       Notes
+      </fo:block>
+            <fo:list-block>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block/>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="0.5em">
+                  <fo:block>
+                    <fo:block>
+                      <fo:block space-after="0.4em">2 3/8 of a cup? 1/8 of a teaspoon? WTF comes up with the
+	stuff?!</fo:block>
+                      <fo:block font-family="sans-serif" font-size="0.9em" space-after="0.5em" color="#ccc" text-align="left">asc  
+        [<fo:inline font-size="0.8em" baseline-shift="super">3</fo:inline>]
+        20021121T05:40:00 -0500</fo:block>
+                    </fo:block>
+                  </fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:block>
+          <fo:block space-after="0.5em">
+            <fo:block font-family="sans-serif" font-weight="bold" space-after="0.5em">         
+        External References
+       </fo:block>
+            <fo:list-block start-indent="0em" font-family="sans-serif" font-size=".8em" text-align="left" color="#000">
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>1.
+           </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body>
+                  <fo:block start-indent="1.5em">http://www.nytimes.com/2002/11/20/dining/201YREX.html</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>2.
+           </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body>
+                  <fo:block start-indent="1.5em">http://www.eatdrinkfeelgood.info/examples/1.1/recipes/graham_cracker_crust.xml</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+              <fo:list-item>
+                <fo:list-item-label>
+                  <fo:block>3.
+           </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body>
+                  <fo:block start-indent="1.5em">http://www.aaronstraupcope.com/whois</fo:block>
+                </fo:list-item-body>
+              </fo:list-item>
+            </fo:list-block>
+          </fo:block>
+        </fo:block>
+      </fo:block>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

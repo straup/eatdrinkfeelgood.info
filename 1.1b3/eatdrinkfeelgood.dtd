@@ -1,0 +1,609 @@
+<!-- ====================================================================== 
+     Eatdrinkfeelgood data format DTD
+     Version 1.1b3                                                       
+
+     $Date: 2002/12/20 04:44:34 $
+
+     PUBLIC "-//Aaron Straup Cope//DTD Eatdrinkfeelgood 1.1b3//EN//XML"
+     SYSTEM http://www.eatdrinkfeelgood.info/1.1b3/eatdrinkfeelgood.dtd
+
+     Documentation : http://www.eatdrinkfeelgood.info/docs/1.1b3
+     Changes       : http://www.eatdrinkfeelgood.info/1.1b3/changes.txt
+
+     This work is licensed under the Creative Commons Attribution-ShareAlike 
+     License. 
+
+     To view a copy of this license, visit 
+
+        http://creativecommons.org/licenses/by-sa/1.0 
+
+     or send a letter to 
+
+        Creative Commons, 
+        559 Nathan Abbott Way, 
+        Stanford, California 
+        94305, USA.
+
+     Copyright (c) 2001-2002 Aaron Straup Cope. All Rights Reserved. 
+     http://www.eatdrinkfeelgood.info
+
+     ====================================================================== -->
+
+<!-- ====================================================================== 
+
+     NOTATIONS
+     ====================================================================== -->
+
+<!-- ====================================================================== 
+
+     course: application/eatdrinkfeelgood.course+xml
+     ====================================================================== -->
+
+     <!NOTATION course   SYSTEM "application/eatdrinkfeelgood.course+xml">
+
+<!-- ====================================================================== 
+
+     recipe: application/eatdrinkfeelgood.recipe+xml
+     ====================================================================== -->
+
+     <!NOTATION recipe  SYSTEM "application/eatdrinkfeelgood.recipe+xml">
+
+<!-- ====================================================================== 
+
+     stage: application/eatdrinkfeelgood.stage+xml
+     ====================================================================== -->
+
+     <!NOTATION stage   SYSTEM "application/eatdrinkfeelgood.stage+xml">
+
+<!-- ====================================================================== 
+
+     set: application/eatdrinkfeelgood.set+xml
+     ====================================================================== -->
+
+     <!NOTATION set     SYSTEM "application/eatdrinkfeelgood.set+xml">
+
+<!-- ====================================================================== 
+
+     foaf: application/rdf+xml
+     ====================================================================== -->
+
+     <!NOTATION foaf   SYSTEM "application/rdf+xml">
+
+<!-- ====================================================================== 
+
+     vcard: application/vcard+xml
+     ====================================================================== -->
+
+     <!NOTATION vcard   SYSTEM "application/vcard+xml">
+
+<!-- ====================================================================== 
+
+     image: image/gif
+     ====================================================================== -->
+
+     <!NOTATION gif     SYSTEM "image/gif">
+
+<!-- ====================================================================== 
+
+     jpeg: image/jpeg
+     ====================================================================== -->
+
+     <!NOTATION jpeg    SYSTEM "image/jpeg">
+
+<!-- ====================================================================== 
+
+     png: image/png
+     ====================================================================== -->
+
+     <!NOTATION png     SYSTEM "image/png">
+
+<!-- ====================================================================== 
+
+     ENTITIES                                                               
+     ====================================================================== -->
+
+<!-- ====================================================================== 
+
+     local.default.content
+     ====================================================================== -->
+
+     <!ENTITY % local.default.content "(#PCDATA)">
+
+<!-- ====================================================================== 
+     local.meta.name                                                        
+
+     Dublin Core. If you're in to that kind of thing.                       
+     It's optional, if you're not.                                          
+     ====================================================================== -->
+
+     <!ENTITY % local.meta.name "(DC.Title | DC.Subject | DC.Description | DC.Type | DC.Source | DC.Relation | DC.Coverage | DC.Creator | DC.Publisher | DC.Contributor | DC.Rights | DC.Date | DC.Format | DC.Identifier | DC.Language)">
+
+<!-- ====================================================================== 
+     local.category.types
+
+     For the database wonks out there. Use the primary key, Luke.           
+     I have no plans of adding something similar for ingredients. That's    
+     just weird.                                                            
+     ====================================================================== -->
+
+     <!ENTITY % local.category.types "(id|name)">
+
+<!-- ====================================================================== 
+     local.category.content                                                     
+     ====================================================================== -->
+
+     <!ENTITY % local.category.content "%local.default.content;">
+
+<!-- ====================================================================== 
+     local.time.unit                                                     
+     ====================================================================== -->
+
+     <!ENTITY % local.time.unit "(days|(hours,minutes?))">
+
+<!-- ====================================================================== 
+     local.measure.unit                                                     
+
+     This came out of the Joy of Cooking.                                   
+
+     I'm open to suggestions. I'd to keep the list to things that can be    
+     converted from one measure to another, so thing like "large" would 
+     best reserved for the customunit element.                              
+     ====================================================================== -->
+
+     <!ENTITY % local.measure.unit "(kilogram|gram|milligram|litre|millilitre|gallon|quart|pint|gill|cup|tablespoon|teaspoon|bushel|peck|pound|dram|ounce)">
+
+<!-- ====================================================================== 
+     local.image.rel                                                       
+
+     I don't know if this is really necessary.                              
+     It just seemed like the right thing to do.                             
+     ====================================================================== -->
+
+     <!ENTITY % local.image.rel "(diagram|photo|illustration)">
+
+<!-- ======================================================================
+     Eatdrinkfeelgood ELEMENTS                                                              
+
+     ====================================================================== -->
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood                                                      
+
+     ====================================================================== -->
+
+     <!ELEMENT eatdrinkfeelgood (head?,(menu|recipe),revhistory)>
+     <!ATTLIST eatdrinkfeelgood 
+	       version	       CDATA         #FIXED "1.1b3"
+	       xmlns	       CDATA         #FIXED "http://www.eatdrinkfeelgood.info/1.1b3/ns#"
+	       xmlns:dc	       CDATA         #FIXED "http://purl.org/dc/elements/1.1/"
+	       xmlns:xlink     CDATA         #FIXED "http://www.w3.org/1999/xlink"
+               xmlns:xi        CDATA         #FIXED "http://www.w3.org/2001/XInclude">
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/head                                                 
+
+     ====================================================================== -->
+
+     <!ELEMENT head (meta*)>
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/head/meta                                            
+
+     ====================================================================== -->
+
+     <!ELEMENT meta EMPTY>
+     <!ATTLIST meta
+	       name    %local.meta.name; #REQUIRED
+	       content CDATA             #REQUIRED
+	       scheme  CDATA             #IMPLIED
+	       lang    CDATA             #IMPLIED >
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/menu                                                 
+
+     ====================================================================== -->
+
+     <!ELEMENT menu   (name,abstract?,course*)>
+
+<!-- ======================================================================
+     /eatdrinkfeelgood/menu/course                                         
+                                                                       
+     ====================================================================== -->
+
+     <!ELEMENT course (name,abstract?,(recipe|extref)*,notes?,history?)>
+
+<!-- ====================================================================== 
+     */recipe                                                               
+
+     ====================================================================== -->
+
+     <!ELEMENT recipe (name,source,yield?,category*,requirements,directions,notes?,history?)>
+
+<!-- ====================================================================== 
+     */recipe/source                                                        
+                                                                        
+     ====================================================================== -->
+
+     <!ELEMENT source (author?,publication?)>
+
+<!-- ====================================================================== 
+    */recipe/source/publication
+
+     ====================================================================== -->
+
+     <!ELEMENT publication (name,dc:date?)>
+     <!ATTLIST publication 
+               xlink:href    CDATA   #IMPLIED
+               isbn          CDATA   #IMPLIED>
+
+<!-- ======================================================================
+     */recipe/yield                                                        
+     ====================================================================== -->
+
+     <!ELEMENT yield (amount*)>
+
+<!-- ======================================================================
+     */amount                                                        
+     ====================================================================== -->
+
+     <!ELEMENT amount (quantity,measure?,detail?)>
+
+<!-- ====================================================================== 
+     */recipe/category                                                      
+
+     ====================================================================== -->
+
+     <!ELEMENT category %local.category.content;>
+     <!ATTLIST category type %local.category.types; #REQUIRED>
+
+<!-- ====================================================================== 
+     */recipe/requirements                                                    
+
+     ====================================================================== -->
+
+     <!ELEMENT requirements (time?,equipment?,ingredients)>
+
+<!-- ====================================================================== 
+     */recipe/requirements/time 
+
+     ====================================================================== -->
+
+     <!ELEMENT time ((preparation,cooking)|(preparation?,cooking)|(preparation,cooking?))>
+
+     <!ELEMENT preparation %local.time.unit;>
+
+     <!ELEMENT cooking %local.time.unit;>
+
+<!-- ====================================================================== 
+     */recipe/requirements/equipment
+
+     ====================================================================== -->
+
+     <!ELEMENT equipment (device*)>
+
+<!-- ====================================================================== 
+     */recipe/requirements/equipment/device
+
+     ====================================================================== -->
+
+     <!ELEMENT device (quantity?,item,detail?,image?)>
+
+<!-- ======================================================================
+     */recipe/ingredients                                                  
+
+     It's not like meals just grow on trees...or something like that.      
+     ====================================================================== -->
+
+     <!ELEMENT ingredients (set*|ing*)>
+
+<!-- ====================================================================== 
+     */recipe/requirements/ingredients/set                                              
+
+     ====================================================================== -->
+
+     <!ELEMENT set (extref|ing*)>
+     <!ATTLIST set name CDATA #REQUIRED>
+
+<!-- ====================================================================== 
+     */recipe/requirements/ingredients/ing                                               
+
+     ====================================================================== -->
+
+     <!ELEMENT ing (amount?,item,detail?,image?)>
+
+<!-- ====================================================================== 
+     */recipe/requirements/ingredients/ing/item                                          
+
+     The ingredient itself. e.g. "egg"                                      
+     ====================================================================== -->
+
+     <!ELEMENT item (#PCDATA)>
+
+<!-- ====================================================================== 
+     */requirements/directions                                                    
+
+     ====================================================================== -->
+
+     <!ELEMENT directions (stage*|step*)>
+
+<!-- ====================================================================== 
+     */directions/stage
+
+     ====================================================================== -->
+
+     <!ELEMENT stage (extref|step*)>
+     <!ATTLIST stage name CDATA #REQUIRED>
+
+<!-- ====================================================================== 
+     */step
+
+     ====================================================================== -->
+
+     <!ELEMENT step (para*,image*)>
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/revhistory                                           
+
+     This is here because ultimately the raw XML is not meant to be written 
+     by a human. Do yourself a favour and get a computer program to manage  
+     this data.                                                             
+     ====================================================================== -->
+
+     <!ELEMENT revhistory (rev*)>
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/revhistory/rev                                       
+                                                                        
+     ====================================================================== -->
+
+     <!ELEMENT rev (version,author,dc:date,changes)>
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/revhistory/rev/version                               
+
+     ====================================================================== -->
+
+     <!ELEMENT version (#PCDATA)>
+
+<!-- ====================================================================== 
+     /eatdrinkfeelgood/revhistory/rev/changes                               
+
+     ====================================================================== -->
+
+     <!ELEMENT changes (para*)>
+
+<!-- ====================================================================== 
+     */notes                                                         
+
+     Notes may also double as comments.                                     
+     ====================================================================== -->
+
+     <!ELEMENT notes (note*,image*)>
+
+<!-- ====================================================================== 
+     */notes/note                                                    
+                                                                        
+     ====================================================================== -->
+
+     <!ELEMENT note (para*,author,dc:date)>
+
+<!-- ======================================================================
+     */history                                                     
+
+     Because every meal has a story.                                        
+     ====================================================================== -->
+
+     <!ELEMENT history (para*,image*,author?,dc:date?)>
+
+<!-- ====================================================================== 
+     */recipe/time/(prep|cooking)/days                                                                 
+
+     ====================================================================== -->
+
+     <!ELEMENT days (n|range)>
+
+<!-- ====================================================================== 
+     */recipe/time/(prep|cooking)/hours
+
+     ====================================================================== -->
+
+     <!ELEMENT hours   (n|range)>
+
+<!-- ====================================================================== 
+     */recipe/time/(prep|cooking)/minutes
+
+     ====================================================================== -->
+
+     <!ELEMENT minutes (n|range)>
+
+<!-- ====================================================================== 
+     */quantity                                                               
+
+     Typically a numeric unit. When in doubt, numberic units are
+     expected to be expressed in decimal format.
+     ====================================================================== -->
+
+     <!ELEMENT quantity (n|range)>
+
+<!-- ====================================================================== 
+     */range                                                              
+
+     ====================================================================== -->
+
+     <!ELEMENT range (min,max)>
+
+<!-- ====================================================================== 
+     */range/min                                                              
+
+     ====================================================================== -->
+
+     <!ELEMENT min (n)>
+
+<!-- ====================================================================== 
+     */range/max                                                            
+
+     ====================================================================== -->
+
+     <!ELEMENT max (n)>
+
+<!-- ====================================================================== 
+     */n                                                              
+
+     ====================================================================== -->
+
+     <!ELEMENT n EMPTY>
+     <!ATTLIST n type (int|float|frac) #IMPLIED
+                 value CDATA           #REQUIRED>
+
+<!-- ====================================================================== 
+     */measure                                                              
+
+     ====================================================================== -->
+
+     <!ELEMENT measure (unit?|customunit?)>
+
+<!-- ====================================================================== 
+     */measure/unit                                                         
+
+     ====================================================================== -->
+
+     <!ELEMENT unit EMPTY>
+     <!ATTLIST unit content %local.measure.unit; #REQUIRED>
+
+<!-- ====================================================================== 
+     */measure/customunit                                                   
+
+     In anticipation of the inevitable incompleteness of the measure/unit  
+     element, here's a roll-yer-own.                                       
+     ====================================================================== -->
+
+     <!ELEMENT customunit (#PCDATA)>
+
+<!-- ====================================================================== 
+     */detail                                                               
+
+     e.g. "lightly beaten"                                                  
+     ====================================================================== -->
+
+     <!ELEMENT detail (#PCDATA)>
+
+<!-- ====================================================================== 
+     */abstract                                                             
+
+     ====================================================================== -->
+     
+     <!ELEMENT abstract (para*)>
+
+<!-- ====================================================================== 
+     */name                                                                 
+
+     ====================================================================== -->
+     
+     <!ELEMENT name (common,other*)>
+
+<!-- ====================================================================== 
+     */name/common                                                          
+
+     "common" is whatever you call it.                                     
+     ====================================================================== -->
+
+     <!ELEMENT common (#PCDATA)>
+
+<!-- ======================================================================
+     */name/other                                                          
+
+     "other" is whatever someone else calls it.                             
+     ====================================================================== -->
+
+     <!ELEMENT other  (#PCDATA)>
+
+<!-- ======================================================================
+     */author                                                              
+
+     ====================================================================== -->
+
+     <!ELEMENT author (extref|(firstname,othername?,surname))>
+	  
+<!-- ======================================================================
+      */author/firstname                                                    
+
+     ====================================================================== -->
+
+     <!ELEMENT firstname (#PCDATA)>
+
+<!-- ======================================================================
+     */author/othername                                                    
+
+     ====================================================================== -->
+
+     <!ELEMENT othername (#PCDATA)>
+
+<!-- ====================================================================== 
+     */author/surname                                                       
+
+     ====================================================================== -->
+
+     <!ELEMENT surname (#PCDATA)>
+
+<!-- ====================================================================== 
+     */dc:date                                                                 
+     
+     Dates should be formatted as "%Y-%m-%dT%H:%M:%S -%H%M"
+     ====================================================================== -->
+
+     <!ELEMENT dc:date (#PCDATA)>
+
+<!-- ====================================================================== 
+     */image                                                             
+
+     ====================================================================== -->
+
+     <!ELEMENT image (title,caption?,(extref|bin64b))>
+     <!ATTLIST image rel %local.image.rel; #REQUIRED>
+
+<!-- ====================================================================== 
+     */title                                                                
+
+     ====================================================================== -->
+
+     <!ELEMENT title (#PCDATA)>
+
+<!-- ====================================================================== 
+     */image/extref                                                          
+
+     ====================================================================== -->
+
+     <!ELEMENT extref EMPTY>
+     <!ATTLIST extref 
+               xi:encoding    CDATA                           #IMPLIED
+               xlink:href     CDATA	                         #REQUIRED
+               xlink:type     (simple)                        #FIXED          "simple"
+               xlink:show     (new|replace|embed|other|none)  #REQUIRED 
+               type           NOTATION (course|recipe|stage|set|foaf|vcard|gif|jpeg|png)  #REQUIRED
+               alt            CDATA        #IMPLIED>
+
+<!-- ====================================================================== 
+     */image/bin64b                                                          
+
+     ====================================================================== -->
+
+     <!ELEMENT bin64b (#PCDATA)>
+     <!ATTLIST bin64b type NOTATION (gif|jpeg|png) #REQUIRED>
+
+<!-- ====================================================================== 
+     */image/caption                                                            
+
+     ====================================================================== -->
+
+     <!ELEMENT caption (para*)>
+
+<!-- ====================================================================== 
+     */para                                                                 
+
+     ====================================================================== -->
+
+     <!ELEMENT para   (#PCDATA)>
+
+<!-- ====================================================================== 
+     FIN
+     ====================================================================== -->

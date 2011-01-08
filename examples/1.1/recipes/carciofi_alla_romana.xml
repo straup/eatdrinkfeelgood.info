@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE eatdrinkfeelgood PUBLIC "-//Aaron Straup Cope//DTD Eatdrinkfeelgood 1.1//EN//XML" "http://www.eatdrinkfeelgood.info/1.1/eatdrinkfeelgood.dtd">
+<eatdrinkfeelgood xmlns="http://www.eatdrinkfeelgood.info/1.1/ns" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <head/>
+  <recipe>
+    <name>
+      <common>Carciofi alla Romana</common>
+      <other>Roman artichokes</other>
+    </name>
+    <source>
+     <author content-type = "html">
+      <extref xlink:href = "http://www.williampettit.com" title = "billiam" />
+     </author>
+    </source>
+    <category type="name">vegetables</category>
+    <requirements>
+      <ingredients>
+        <ing>
+          <amount>
+            <quantity>
+              <n value=""/>
+            </quantity>
+            <measure/>
+          </amount>
+          <item>artichokes</item>
+        </ing>
+        <ing>
+          <amount>
+            <quantity>
+              <n value="1"/>
+            </quantity>
+            <measure>
+              <unit content="cup"/>
+            </measure>
+          </amount>
+          <item>water</item>
+        </ing>
+        <ing>
+          <amount>
+            <quantity>
+              <n value="1/2"/>
+            </quantity>
+            <measure>
+              <unit content="cup"/>
+            </measure>
+          </amount>
+          <item>olive oil</item>
+        </ing>
+        <ing>
+          <amount>
+            <quantity>
+              <n value=""/>
+            </quantity>
+            <measure/>
+          </amount>
+          <item>garlic</item>
+        </ing>
+        <ing>
+          <amount>
+            <quantity>
+              <n value=""/>
+            </quantity>
+            <measure/>
+          </amount>
+          <item>mint</item>
+        </ing>
+      </ingredients>
+    </requirements>
+    <directions>
+      <step>
+        <para>Clean chokes, including lots of leaves</para>
+      </step>
+      <step>
+        <para>Skin the stem and cut off the top</para>
+      </step>
+      <step>
+        <para>Put artichikes in a shallow pan with water, oil, salt and pepper, mint.</para>
+      </step>
+      <step>
+        <para>Cook, covered, until soft (20-30 minutes)</para>
+      </step>
+    </directions>
+    <notes>
+      <note>
+        <para>vegetarian:</para>
+        <author content-type="html">
+          <extref xlink:href="http://www.aaronstraupcope/whois" xlink:title="asc"/>
+        </author>
+        <dc:date>20021128T23:46:00 -0500</dc:date>
+      </note>
+      <note>
+        <para>You may also use parsley in the place of the mint.</para>
+        <author content-type="text">
+          <extref xlink:href="#" xlink:title="Aaron Cope"/>
+        </author>
+        <dc:date>2001-09-10T00:00:00 -0500</dc:date>
+      </note>
+    </notes>
+    <history>
+      <para>I got this recipe from Bill. He made it for flatfishnight once, I think.</para>
+      <author content-type="text">
+        <extref xlink:href="#" xlink:title="Aaron Cope"/>
+      </author>
+    </history>
+  </recipe>
+  <revhistory>
+    <rev>
+      <version>1.1.1</version>
+      <author content-type="html">
+        <extref xlink:href="http://www.aaronstraupcope/whois" xlink:title="asc"/>
+      </author>
+      <dc:date>20021128T23:46:00 -0500</dc:date>
+      <changes>
+        <para>Updated to version 1.1 of the DTD</para>
+      </changes>
+    </rev>
+    <rev>
+      <version>1.1</version>
+      <author content-type="text">
+        <extref xlink:href="#" xlink:title="Aaron Cope"/>
+      </author>
+      <dc:date>2001-09-11T00:00:00 -0500</dc:date>
+      <changes>
+        <para>Updated document to reflect changes to the DTD.</para>
+      </changes>
+    </rev>
+    <rev>
+      <version>1.0</version>
+      <author content-type="text">
+        <extref xlink:href="#" xlink:title="Aaron Cope"/>
+      </author>
+      <dc:date>2001-09-10T00:00:00 -0500</dc:date>
+      <changes>
+        <para>Initial revision.</para>
+      </changes>
+    </rev>
+  </revhistory>
+</eatdrinkfeelgood>

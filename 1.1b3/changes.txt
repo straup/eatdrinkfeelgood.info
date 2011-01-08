@@ -1,0 +1,74 @@
+Changes for eatdrinkfeelgood 1.1b3 DTD - Thu Nov 21, 2002
+
+	- Removed local.image.type entity
+
+	- Modified content model for 'publication' to add
+	  optional 'xlink:href' attribute
+
+	- Modified content model for 'ing' element to replace
+	  'quantity' and 'measure' elements with 'amount' wrapper
+
+	- Modified content model for 'yield' to allow for 
+	  one or more 'amount' elements
+
+	- Modified content model for 'quantity' to allow for
+	  a 'range' element or #PCDATA
+
+	- Modified content model for 'course' to allow for an
+	  'extref' element.
+
+	- Modified content model for 'set' to allow for an
+	  'extref' element.
+
+	- Modified content model for 'stage' to allow for an
+	  'extref' element.
+
+	- Modified content model for 'author' to allow for an
+	  'extref' element.
+
+	- Modified content model for 'extref' to use XLink and 
+	  XInclude syntax.
+
+	- Modified content model for 'extref' element to require
+	  an 'alt' attribute
+
+	- Modified content model for 'extref' element to replace
+	  'content-type' attribute with 'type' attribute
+
+	- Modified content model for 'image' element to contain
+	  a 'rel' attribute
+
+	- Modified content model for 'image' element to require
+	  title regardless of whether image is inline or remote.
+
+	- Modified 'bin64b@content-type' element to replace 
+	  'content-type' attribute with 'type' attribute
+
+	- Modified 'days' element to require 'n' or 'range' 
+	  'element'
+
+	- Modified 'hours' element to require 'n' or 'range' 
+	  'element'
+
+	- Modified 'minutes' element to require 'n' or 'range' 
+	  'element'
+
+	- Modified 'quantity' element to require 'n' or 'range' 
+	  'element'
+
+	- Added XLink and XInclude namespaces
+
+	- Added 'n' element
+
+	- Added 'range' element
+
+	- Added 'min' element
+
+	- Added 'max' element
+
+	- Added 'amount' element - note: this is relative to
+	  version 1.1b2 of the DTD
+
+	- Added local.image.rel entity
+
+	- Added NOTATIONS

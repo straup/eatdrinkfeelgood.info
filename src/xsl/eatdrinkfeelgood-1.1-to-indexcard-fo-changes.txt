@@ -1,0 +1,68 @@
+Changes for the eatdrinkfeelgood-1.1-to-indexcard-fo XSL stylesheet
+
+1.0   April 01, 2006
+
+- Updated to use local-name and namespace-uri functions
+
+0.94  January 10, 2003
+
+- Added image support
+
+- Changed default dimensions to 5" x 8"
+
+- Updated 'notes.txt'
+
+0.93  January 03, 2003
+
+- Replaced all '*.mm' and '*pt' measurements with '*em', which
+  will scale stuff based on the global 'font-size' parameter.
+
+- xi:fallback/@xlink:href values are no longer included in the
+  'External references' list if xi:include elements are munged.
+
+- Made sure all fo:* attributes are set using 'xsl:attribute'.
+
+- Updated 'notes.txt'
+
+0.92  January 01, 2003
+
+- Added use of 'eatdrinkfeelgood-1.1-shared.xsl'
+
+- Increased 'space-after' property for directions
+
+- Renamed and re-ordered templates
+
+- Removed unnecessary templates
+
+- Updated 'notes.txt' 
+
+0.91  December 31, 2002
+
+- Removed all calls to fo:footnote objects
+
+- Removed 'Authors' template and 'authors' keys
+
+- Removed 'fo:' from 'fo:footnote*' template names
+
+- Removed 'break-after=column' property for notes
+
+- Added foofy display formatting for xi:include elements
+
+- Added 'External-References', 'Reference-Link' templates
+  and 'extrefs' key
+
+- 'publication/@isbn' is no longer displayed as a footnote
+   but as a block-level item
+
+- Added possible space-before formatting for source/author
+   element(s)
+
+- Moved 'bugs, todos and gotchas' into separate document.
+
+- Moved 'changes' into separate document.
+
+0.9   December 30, 2002
+
+- Initial public release
+
+$Id: eatdrinkfeelgood-1.1-to-indexcard-fo-changes.txt,v 1.8 2003/01/10 06:54:25 asc Exp $

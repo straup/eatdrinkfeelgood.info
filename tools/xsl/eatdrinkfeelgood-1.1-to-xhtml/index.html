@@ -1,0 +1,267 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-ca">
+<head profile="http://www.eatdrinkfeelgood.info/profile">
+<title>eatdrinkfeelgood.info - xsl tools | eatdrinkfeelgood 1.1 to xhtml</title>
+<style media="screen" type="text/css" title="screen">
+   /* <![CDATA[ */
+   @import url(/css/shared/screen.css);
+   @import url(/css/shared/screen-splash.css);
+   @import url(/css/screen.css);
+   /* ]]> */
+  </style>
+<link rel="edfg.references" title="Eatdrinkfeelgood 1.1 Specification"
+   href="/1.1" type="text/html" />
+<link rel="References" title="XHTML 1.1 Specification"
+   href="http://www.w3.org/TR/xhtml11/" type="text/html" />
+<link rel="edfg.references" title="Extensible Stylesheet Language"
+   href="http://www.w3.org/Style/XSL/" type="text/html" />
+<link rel="edfg.references" title="The xsltproc command line
+   processor" href="http://xmlsoft.org/XSLT/xsltproc2.html"
+   type="text/html" />
+<link rel="Up" title="Eatdrinkfeelgood XSL Tools" href="/tools/xsl"
+   type="text/html" />
+<link rel="Start" title="Eatdrinkfeelgood homepage" href="/"
+   type="text/html" />
+<link rel="edfg.current release" title="Eatdrinkfeelgood current
+   release" href="/1.1" type="text/html" />
+<link rel="copyright" title="Eatdrinkfeelgood license" href="/license"
+   type="text/html" />
+<link rev="made" title="Aaron Straup Cope"
+   href="http://www.aaronstraupcope.com/whois" type="text/html" />
+</head>
+<body>
+<h1>these are eatdrinkfeelgood<span class="subsect-title">xsl tools</span>
+</h1>
+<div class="sect">
+   <h2>eatdrinkfeelgood 1.1 to xhtml</h2>
+
+   <p>The current version of the <span class="stylesheet">eatdrinkfeelgood 1.1 to xhtml</span> stylesheet is <span class="version">1.1</span>.</p>
+
+   <p><span class="reldate">released April 01, 2006</span></p>
+
+   <h3>source</h3>
+    <a href="/src/xsl/eatdrinkfeelgood-1.1-to-xhtml-v1.1.xsl">www.eatdrinkfeelgood/src/xsl/eatdrinkfeelgood-1.1-to-xhtml-v1.1.xsl</a>
+
+   <h3>example</h3>
+   <pre>
+xsltproc --xinclude \
+ -o /path/to/newfile.html \
+ --stringparam lang 'en-ca' \
+ --stringparam css_screen '/css/screen.css screen' \
+ /path/to/eatdrinkfeelgood-1.1-to-xhtml.xsl \
+ /path/to/your/recipe.xml
+   </pre>
+
+   <h3>parameters</h3>
+
+   <ul class="flush-left">
+<li>
+     <strong>lang</strong>
+     <p>This parameter is expected to be a string that will be assigned to the <code>xml:lang</code> attribute of the <a href="#" rel="bookmark" title="The XHTML html element">html</a> element.</p>
+     <pre>
+--stringparam lang 'en-ca'
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; 
+         xml:lang=&quot;en-ca&quot;&gt;
+</pre>
+
+    </li>
+    <li>
+     <strong>css_all</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting <span class="link-media">all</span> media.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_all '/css/all.css shared-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/all.css&quot; 
+         media=&quot;all&quot; 
+         title=&quot;shared-styles&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_screen</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">screen</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_screen '/css/screen.css screen-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/screen.css&quot; 
+         media=&quot;screen&quot; 
+         title=&quot;screen-styles&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_print</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">print</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_print \
+ '/css/print.css long-live-the-paperless-office'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/print.css&quot; 
+         media=&quot;print&quot; 
+         title=&quot;long-live-the-paperless-office&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_handheld</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">handheld</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_handheld '/css/pda.css pda-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/pda.css&quot; 
+         media=&quot;handheld&quot; 
+         title=&quot;pda-styles&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_projection</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">projection</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_all '/css/proj.css proj-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/proj.css&quot; 
+         media=&quot;projection&quot; 
+         title=&quot;proj-styles&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_tv</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">screen</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_tv '/css/tv.css kill-your-tv'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/tv.css&quot; 
+         media=&quot;tv&quot; 
+         title=&quot;kill-your-tv&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_aural</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">aural</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_aural '/css/aural.css aural-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/aural.css&quot; 
+         media=&quot;aural&quot; 
+         title=&quot;aural-styles&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_braille</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">braille</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_aural '/css/braille.css braille-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/braille.css&quot; 
+         media=&quot;braille&quot; 
+         title=&quot;braille-styles&quot; /&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>css_tty</strong>
+
+     <p>This parameter is used to add a <a href="#" rel="bookmark" title="The XHTML link element">link</a> element defining a stylesheet targeting media whose type is <span class="link-media">tty</span>.</p>
+
+     <p>The parameter is expected to be a string constisting of two parts, each separated by a single space.</p>
+     <p>The first part should a URI that will be assigned to the <code>href</code> attribute.</p>
+     <p>The second part should a string that will be assigned to the <code>href</code> attribute.</p>
+
+     <pre>
+--stringparam css_tty '/css/tty.css tty-styles'
+
+&lt;link rel=&quot;stylesheet&quot; 
+         type=&quot;text/css&quot; 
+         href=&quot;/css/tty.css&quot; 
+         media=&quot;tty&quot; 
+         title=&quot;tty-styles&quot; /&gt;
+     </pre>
+    </li>
+
+   </ul>
+</div>
+<div class="footer">
+   &gt;eatdrinkfeelgood.info<br /><div class="by">by:<a href="http://www.aaronstraupcope.com">aaronstraupcope</a>
+</div>
+
+   <div class="copyright">
+    copyright &copy; <span class="copy-first">2001-</span><span class="copy-current">2008</span> aaron straup cope. all rights reserved.
+    <br />
+    the eatdrinkfeelgood dtd is licensed under the <a href="http://creativecommons.org/licenses/by-sa/1.0">creative commons attribution-sharealike license</a>.
+   </div>
+  </div>
+</body>
+</html>
+
+
+

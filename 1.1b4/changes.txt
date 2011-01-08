@@ -1,0 +1,7 @@
+Changes for eatdrinkfeelgood 1.1b4 DTD - Sun Nov 24, 2002
+
+	- Removed 'title' element
+
+	- Added text NOTATION
+
+	- TBW

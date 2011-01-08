@@ -1,0 +1,98 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-ca">
+<head profile="http://www.eatdrinkfeelgood.info/profile">
+<title>eatdrinkfeelgood.info - xsl tools | eatdrinkfeelgood 1.0 to 1.1</title>
+<style media="screen" type="text/css" title="screen">
+   /* <![CDATA[ */
+   @import url(/css/shared/screen.css);
+   @import url(/css/shared/screen-splash.css);
+   @import url(/css/screen.css);
+   /* ]]> */
+  </style>
+<link rel="edfg.references" title="Eatdrinkfeelgood 1.0 Specification"
+   href="/1.1" type="text/html" />
+<link rel="edfg.references" title="Eatdrinkfeelgood 1.1 Specification"
+   href="/1.1" type="text/html" />
+<link rel="edfg.references" title="Extensible Stylesheet Language"
+   href="http://www.w3.org/Style/XSL/" type="text/html" />
+<link rel="edfg.references" title="The xsltproc command line
+   processor" href="http://xmlsoft.org/XSLT/xsltproc2.html"
+   type="text/html" />
+<link rel="Up" title="Eatdrinkfeelgood XSL Tools" href="/tools/xsl"
+   type="text/html" />
+<link rel="Start" title="Eatdrinkfeelgood homepage" href="/"
+   type="text/html" />
+<link rel="edfg.current release" title="Eatdrinkfeelgood current
+   release" href="/1.1" type="text/html" />
+<link rel="copyright" title="Eatdrinkfeelgood license" href="/license"
+   type="text/html" />
+<link rev="made" title="Aaron Straup Cope"
+   href="http://www.aaronstraupcope.com/whois" type="text/html" />
+</head>
+<body>
+<h1>these are eatdrinkfeelgood<span class="subsect-title">xsl tools</span>
+</h1>
+<div class="sect">
+   <h2>eatdrinkfeelgood 1.0 to 1.1</h2>
+
+   <p>The current version of the <span class="stylesheet">eatdrinkfeelgood 1.0 to 1.1</span> stylesheet is <span class="version">1.01</span>.</p>
+
+   <p><span class="reldate">released December 02, 2002</span></p>
+
+   <h3>source</h3>
+    <a href="/src/xsl/eatdrinkfeelgood-1.0-to-1.1-v1.01.xsl">www.eatdrinkfeelgood/src/xsl/eatdrinkfeelgood-1.0-to-1.1-v1.01.xsl</a>
+
+   <h3>example</h3>
+   <pre>
+xsltproc -o /path/to/newfile.xml \
+ --stringparam name 'foaf http://foo.com/asc.foaf asc' \
+ --stringparam date '20021128T13:26:00 -0500 \
+ /path/to/eatdrinkfeelgood-1.0-to-1.1.xsl \
+ /path/to/your_recipe.xml
+   </pre>
+
+   <h3>parameters</h3>
+
+   <ul class="flush-left">
+<li>
+     <strong>name</strong>
+     <p>This parameter is used while creating a new <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/rev.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 rev element">rev</a> child element of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/revhistory.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 revhistory element">revhistory</a> element, indicating that the document has been converted from version <span class="version">1.0</span> to <span class="version">1.1</span> of the Eatdrinkfeelgood DTD.</p>
+     <p>The parameter is expected to be a string constisting of three parts, each separated by a single space.</p>
+     <p>The first part should be a valid NOTATION type that will be assigned to the <code>content-type</code> attribute of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/author.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 author element">author</a> element.</p>
+     <p>The second part should a URI that will be assigned to the <code>xlink:href</code> attribute of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/extref.html" rel="bookmark" title="The Eatrdrinkfeelgood 1.1 extref element">extref</a> child element of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/author.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 author element">author</a> element.</p>
+     <p>The third part should a string that will be assigned to the <code>xlink:title</code> attribute of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/extref.html" rel="bookmark" title="The Eatrdrinkfeelgood 1.1 extref element">extref</a> child element of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/author.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 author element">author</a> element.</p>
+     <pre>
+--stringparam name 'foaf http://foo.com/asc.foaf asc'
+
+&lt;author content-type = &quot;foaf&quot;&gt;
+ &lt;extref xlink:href=&quot;http://foo.com/asc.foaf&quot;
+            xlink:title=&quot;asc&quot; /&gt;
+&lt;/author&gt;
+     </pre>
+    </li>
+
+    <li>
+     <strong>date</strong>
+     <p>This parameter is used while creating a new <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/rev.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 rev element">rev</a> child element of the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/revhistory.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 revhistory element">revhistory</a> element, indicating that the document has been converted from version <span class="version">1.0</span> to <span class="version">1.1</span> of the Eatdrinkfeelgood DTD.</p>
+     <p>The parameter is expected to be a string that will be assigned to the <a href="http://eatdrinkfeelgood.info/docs/1.1b4/elements/dc:date.html" rel="bookmark" title="The Eatdrinkfeelgood 1.1 dc:date element">dc:date</a> element.</p>
+     <pre>
+--stringparam date '20021128T13:26:00 -0500
+
+&lt;dc:date&gt;20021128T13:26:00 -0500&lt;/dc:date&gt;
+     </pre>
+    </li>
+   </ul>
+</div>
+<div class="footer">
+   &gt;eatdrinkfeelgood.info<br /><div class="by">by:<a href="http://www.aaronstraupcope.com">aaronstraupcope</a>
+</div>
+
+   <div class="copyright">
+    copyright &copy; <span class="copy-first">2001-</span><span class="copy-current">2008</span> aaron straup cope. all rights reserved
+    <br />
+    the eatdrinkfeelgood dtd is licensed under the <a href="http://creativecommons.org/licenses/by-sa/1.0">creative commons attribution-sharealike license</a>.
+   </div>
+  </div>
+</body>
+</html>

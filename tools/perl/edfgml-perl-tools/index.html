@@ -1,0 +1,96 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-ca">
+<head profile="http://www.eatdrinkfeelgood.info/profile">
+<title>eatdrinkfeelgood.info - perl tools</title>
+<style media="screen" type="text/css" title="screen">
+   /* <![CDATA[ */
+   @import url(/css/shared/screen.css);
+   @import url(/css/shared/screen-splash.css);
+   @import url(/css/screen.css);
+   /* ]]> */
+  </style>
+<link rel="edfg.references" title="Practical Extraction and Report
+   Language" href="http://www.perl.com" type="text/html" />
+<link rel="Up" title="Eatdrinkfeelgood Perl Tools" href="/tools/perl"
+   type="text/html" />
+<link rel="Start" title="Eatdrinkfeelgood homepage" href="/"
+   type="text/html" />
+<link rel="edgf.current release" title="Eatdrinkfeelgood 1.1"
+   href="/1.1" type="text/html" />
+<link rel="copyright" title="Eatdrinkfeelgood copyright notice"
+   href="/license" type="text/html" />
+<link rev="made" title="Aaron Straup Cope"
+   href="http://www.aaronstraupcope.com/whois" type="text/html" />
+</head>
+<body>
+<h1>these are eatdrinkfeelgood<span class="subsect-title">perl tools</span>
+</h1>
+<div class="sect">
+   <h2>edfgml-perl-tools</h2>
+
+   <p>The current version of the <span class="perl-mode">edfgml-perl-tools</span> package is <span class="version">0.1.1</span>.</p>
+
+   <p><span class="reldate">Released January 25, 2002</span></p>
+
+   <p>These tools are specific to the Eatdrinkfeelgood <span class="version">1.0</span> DTD and are no longer being actively maintained.</p>
+
+   <h3>source</h3>
+   <a href="/src/perl/edfgml-perl-tools-0.1.1.tar.gz">www.eatdrinkfeelgood.info/src/perl/edfgml-perl-tools-0.1.1.tar.gz</a>
+   
+   <h3>edfgml-perl-tools/bin</h3>
+
+   <ul class="flush-left">
+<li><strong>make-index-card</strong></li>
+    <p>Create an index-card size PDF document from one or more paths containing Eatdrinkfeelgood documents.</p>
+   </ul>
+<h3>edfgml-perl-tools/cgi</h3>
+
+   <ul class="flush-left">
+<li><strong>pdf-gen</strong></li>
+    <p>A CGI script to create an index-card size PDF document from one or more paths containing Eatdrinkfeelgood documents.</p>
+   </ul>
+<h3>edfgml-perl-tools/lib</h3>
+
+   <ul class="flush-left">
+<li>
+     <strong>Eatdrinkfeelgood/Apache.pm</strong>
+     <p>A mod_perl handler for displaying, and generating directory indices of Eatdrinkfeelgood documents using XSLT.</p>
+    </li>
+    <li>
+     <strong>Eatdrinkfeelgood/Directory/Index.pm</strong>
+     <p>I would have liked to use Petr Cimprich's XML::Directory::SAX and I may yet. I am sticking with this module for the time being because it has better support for including/excluding files and because there didn't seem to be any (simple) way to get XML::Directory::SAX to stream files alphabetically.</p>
+
+     <p class="remark">note: most of these problems have been fixed in version 0.96 of XML::Directory</p>
+    </li>
+    <li>
+     <strong>Eatdrinkfeelgood/PDF/Base.pm</strong>
+     <p>Wrapper module for PDFLib.pm</p>
+    </li>
+    <li>
+     <strong>Eatdrinkfeelgood/PDF/IndexCard.pm</strong>
+     <p>Object methods for generating index card sized PDF files from one or more Eatdrinkfeelgood documents.</p>
+    </li>
+    <li>
+     <strong>Eatdrinkfeelgood/Recipe.pm</strong>
+     <p>Object methods for reading an Eatdrinkfeelgood recipe.</p>
+    </li>
+    <li>
+     <strong>Eatdrinkfeelgood/XML/YAGenerator.pm</strong>
+     <p>This module subclasses XML::Generator to fix some bugs in the creation of attributes and 
+processing instructions.</p>
+    </li>
+   </ul>
+</div>
+<div class="footer">
+   &gt;eatdrinkfeelgood.info<br /><div class="by">by:<a href="http://www.aaronstraupcope.com">aaronstraupcope</a>
+</div>
+
+   <div class="copyright">
+    copyright &copy; <span class="copy-first">2001-</span><span class="copy-current">2008</span> aaron straup cope. all rights reserved
+    <br />
+    the eatdrinkfeelgood dtd is licensed under the <a href="http://creativecommons.org/licenses/by-sa/1.0">creative commons attribution-sharealike license</a>.
+   </div>
+  </div>
+</body>
+</html>

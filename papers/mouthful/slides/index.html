@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Design Issues and Technical Challenges Making the Eatdrinkfeelgood Markup Languge RDF-Friendly</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="ui/slides.css" type="text/css"
+   media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/opera.css" type="text/css"
+   media="projection" id="operaFix" />
+<link rel="stylesheet" href="ui/print.css" type="text/css"
+   media="print" id="slidePrint" />
+<script src="ui/slides.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<div id="controls"></div>
+</div>
+
+</div>
+<div class="presentation">
+
+<div class="slide">
+ <h1>Design Issues and Technical Challenges Making the Eatdrinkfeelgood Markup Languge RDF-Friendly</h1>
+
+ <p>Aaron Straup Cope<br />
+ http://www.aaronstraupcope.com<br />http://www.eatdrinkfeelgood.info</p>
+</div>
+
+<div class = "slide">
+ <h1>Hi, my name is Aaron</h1>
+
+ <div class = "image">
+  <img src = "img/20031231-mtl-shodan.jpg"
+       height = "350" width = "400"
+       alt = "" />
+ </div>
+
+ <div class = "para">When I am not writing code, I am usually in the kitchen</div>
+</div>
+
+<div class = "slide">
+ <h1>Eatdrinkfeelgood Markup Language</h1>
+
+ <div class = "image">
+  <img src = "img/20040515-mtl-tbones.jpg"
+       height = "250" width = "400"
+       alt = "" />
+ </div>
+
+
+ <div class = "para">Maximum reusability</div>
+
+ <div class = "para">Allow for higher-order functions</div>
+
+ <div class = "para">The <q>View source</q> rule</div>
+
+</div>
+
+<div class = "slide">
+ <h1>Why RDF?</h1>
+
+ <div class = "image">
+  <img src = "img/20040606-mtl-eggs.jpg"
+       height = "350" width = "400"
+       alt = "" />
+ </div>
+
+ <div class = "para">Formalized grammar</div>
+
+ <div class = "para">Increased flexibility and extensibility</div>
+
+ <div class = "para">Ontologies and unambiguous referents</div>
+
+</div>
+
+<!--
+<div class = "slide">
+ <h1>But what does it mean?</h1>
+
+ <div class = "image">
+  <img src = "img/20040626-mtl-bluefish.jpg"
+       height = "350" width = "400"
+       alt = "" />
+ </div>
+
+ <div class = "para">The wealth of unexpected consequences and happy surprises</div>
+
+</div>
+-->
+
+<div class = "slide">
+ <h1>Why not RDF &#8212; Parsers</h1>
+
+ <div class = "image">
+  <img src = "img/20040626-mtl-bluefish.jpg"
+       height = "350" width = "400"
+       alt = "" />
+ </div>
+
+ <!--
+ <div class = "image">
+  <img src = "img/20040519-mtl-broccolipasta.jpg"
+       height = "300" width = "400"
+       alt = "" />
+ </div>
+ -->
+
+ <div class = "para"><q>Use Java</q> is not an answer</div>
+
+</div>
+
+<div class = "slide">
+ <h1>Why not RDF &#8212; XML</h1>
+
+ <div class = "image">
+  <img src    = "img/20040624-mtl-sardines.jpg"
+       height = "350" width = "400"
+       alt    = "" />
+ </div>
+
+ <div class = "para">Whither RDF/XML C14N?</div>
+
+ <div class = "para">Plays poorly with XSLT</div>
+
+ <div class = "para">Breaks XInclude</div>
+
+</div>
+
+<div class = "slide">
+ <h1>Why not RDF &#8212; URIs</h1>
+
+ <div class = "image">
+  <img src = "img/20031102-li-froigrass.jpg"
+       height = "350" width = "400"
+       alt = "" />
+ </div>
+
+ <div class = "para">URIs are not required to be resolvable</div>
+
+ <div class = "para"><q>I am not a number!</q></div>
+
+</div>
+
+<div class = "slide">
+ <h1>Conclusion</h1>
+
+ <div class = "image">
+  <img src = "img/200312nn-mtl-coffee-cookies.jpg"
+       height = "350" width = "400"
+       alt = "" />
+ </div>
+
+ <div class = "para">Unlikely to be RDF</div>
+
+ <div class = "para">Modify the language to more easily map to RDF</div>
+
+ <div class = "para">XSLT 2.0 to the rescue?</div>
+
+</div>
+
+
+</body>
+</html>

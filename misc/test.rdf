@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3c.org/rdfs/"
+  xmlns:dc="http://dublincore.org#"
+  xmlns:e="http://eatdrinkfeelgood.info#">
+
+ <e:recipe rdf:about = "http://eatdrinkfeelgood.info/rdf/document#recipe">
+
+   <dc:title>Runny Powder Balls</dc:title>
+
+   <e:source>
+
+    <!--
+    <e:individual rdf:about="http://aaronstraupcope.com#">
+      <e:firstname>Aaron</e:firstname>
+      <e:lastname>Cope</e:lastname>
+    </e:individual>
+    -->
+
+   <rdf:Seq rdf:about="http://eatdrinkfeelgood.info/rdf/recipe#sources">
+    <rdf:li>
+    <e:individual rdf:about="http://aaronstraupcope.com#">
+      <e:firstname>Aaron</e:firstname>
+      <e:lastname>Cope</e:lastname>
+    </e:individual>
+    </rdf:li>
+    <rdf:li>
+      <e:publication rdf:about = "http://www.nytimes.com#">
+       <e:uri>http://www.nytime.com/food/2003/06/02/RUNN.html</e:uri>
+      </e:publication>
+    </rdf:li>
+    </rdf:Seq>
+
+   </e:source>
+
+   <e:ingredients>
+  <rdf:Seq rdf:about = "http://eatdrinkfeelgood.info/rdf/recipe#ingredients">
+
+  <rdf:li>
+
+  <rdf:Description rdf:about = "http://eatdrinkfeelgood.info/rdf/foodstuff#baking powder">
+
+   <e:amount>
+    <e:range rdf:about = "http://eatdrinkfeelgood.info/rdf/amount#variable">
+     <e:lower>
+      <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/int#4" />
+      </e:lower>
+      <e:upper>
+       <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/fraction#4 1/2" />
+      </e:upper>
+     </e:range>
+   </e:amount>
+
+   <e:measure>
+    <e:unit rdf:about = "http://eatdrinkfeelgood.info/rdf/measure#teaspoon" />
+    </e:measure>
+
+  </rdf:Description>
+  </rdf:li>
+
+  <rdf:li>
+
+  <rdf:Description rdf:about = "http://eatdrinkfeelgood.info/rdf/foodstuff#egg">
+
+   <e:amount>
+    <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/int#1" />
+   </e:amount>
+
+   <e:measure>
+    <e:unit rdf:about = "http://eatdrinkfeelgood.info/rdf/measure/custom#really big" />
+   </e:measure>
+
+   <e:detail>
+    but not too runny
+   </e:detail>  
+  </rdf:Description>
+
+  </rdf:li>
+  </rdf:Seq>
+   </e:ingredients>
+   </e:recipe>
+
+</rdf:RDF>

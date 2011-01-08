@@ -1,0 +1,115 @@
+<?xml version = "1.0" ?>
+<!DOCTYPE eatdrinkfeelgood PUBLIC "-//Aaron Straup Cope//DTD Eatdrinkfeelgod 1.0//EN//XML"
+                                  "http://www.aaronland.net/food/edfgml/eatdrinkfeelgood.dtd">
+<eatdrinkfeelgood>
+  <head>
+  </head>
+  <recipe>
+    <name>
+     <common>Carciofi alla Romana</common>
+      <other>Roman artichokes</other>
+    </name>
+    <source type="name" content="Billiam"/>
+    <servings></servings>
+    <category type = "name" content = "vegetables"/>
+    <custom name = "vegetarian" content = ""/>
+    <ingredients>
+      <ing>
+	<amount></amount>
+	<measure></measure>
+	<item>artichokes</item>
+      </ing>
+      <ing>
+	<amount>1</amount>
+	<measure>
+	  <unit content="cup"/>
+	</measure>
+	<item>water</item>
+      </ing>
+      <ing>
+	<amount>1/2</amount>
+	<measure>
+	  <unit content="cup"/>
+	</measure>
+	<item>olive oil</item>
+      </ing>
+      <ing>
+	<amount></amount>
+	<measure></measure>
+	<item>garlic</item>
+      </ing>
+      <ing>
+	<amount></amount>
+	<measure></measure>
+	<item>mint</item>
+      </ing>
+    </ingredients>
+    <directions>
+      <step>
+	<para>Clean chokes, including lots of leaves</para>
+      </step>
+      <step>
+	<para>Skin the stem and cut off the top</para>
+      </step>
+      <step>
+	<para>Put artichikes in a shallow pan with water, oil, salt and pepper, mint.</para>
+      </step>
+      <step>
+	<para>Cook, covered, until soft (20-30 minutes)</para>
+      </step>
+    </directions>
+    <notes>
+      <note>
+	<para>You may also use parsley in the place of the mint.</para>
+	<author>
+	  <firstname>Aaron</firstname>
+	  <surname>Cope</surname>
+	</author>
+	<date>
+	  <year>2001</year>
+	  <month>09</month>
+	  <day>10</day>
+	  </date>
+      </note>
+    </notes>
+    <history>
+      <para>I got this recipe from Bill. He made it for flatfishnight once, I think.</para>
+      <author>
+	    <firstname>Aaron</firstname>
+	    <surname>Cope</surname>
+	  </author>
+	</history>
+      </recipe>
+	<revhistory>
+    <rev>
+      <version>1.1</version>
+      <author>
+	<firstname>Aaron</firstname>
+	<surname>Cope</surname>
+      </author>
+      <date>
+	<year>2001</year>
+	<month>09</month>
+	<day>11</day>
+      </date>
+      <changes>
+	<para>Updated document to reflect changes to the DTD.</para>
+      </changes>
+    </rev>
+	  <rev>
+	    <version>1.0</version>
+	    <author>
+	      <firstname>Aaron</firstname>
+	      <surname>Cope</surname>
+	    </author>
+	    <date>
+	      <year>2001</year>
+	      <month>09</month>
+	      <day>10</day>
+	    </date>
+	    <changes>
+	      <para>Initial revision.</para>
+	    </changes>
+	  </rev>
+	</revhistory>
+</eatdrinkfeelgood>

@@ -1,0 +1,89 @@
+#!/usr/local/bin/perl
+use strict;
+
+=pod
+
+=head1 NAME
+
+make-index-card
+
+=head1 SUMMARY
+
+ $> ./make-index-card --infile=/path/to/recipes/dir --outfile=/path/to/pdf/file
+
+=head1 DESCRIPTION
+
+Create an index-card size PDF document from one or more paths containing Eatdrinkfeelgood documents.
+
+=cut
+
+use Eatdrinkfeelgood::PDF::IndexCard;
+
+use Carp;
+use DirHandle;
+use Getopt::Long;
+
+{
+    &main();
+    exit;
+}
+
+sub main {
+    my $outfile = "";
+    my @infiles = ();
+
+    &Getopt::Long::GetOptions(
+			      "outfile=s"  => \$outfile,
+			      "infile=s"   => \@infiles,
+			      ) || carp $!;
+
+    &create($outfile,&visit(@infiles));
+    return 1;
+}
+
+sub visit {
+    my @paths   = @_;
+    my @recipes = ();
+
+    foreach my $f (@paths) { 
+	
+	if (! -d $f) { 
+	    push(@recipes,$f);
+	    next;
+	}
+	
+	my $dh=DirHandle->new($f); 
+	push(@recipes,map { &visit("$f/$_"); } grep { ! /^\./ && ! /~$/ } $dh->read());
+    }
+    
+    return @recipes;
+}
+
+sub create {
+    my $file    = shift;
+    my @recipes = @_;
+
+    my $card = Eatdrinkfeelgood::PDF::IndexCard->new($file);
+    $card->to_file(@recipes);
+
+    return 1;
+}
+
+=pod
+
+=head1 AUTHOR
+
+Aaron Straup Cope
+
+=head1 SEE ALSO 
+
+http://www.aaronland.net/food/edfgml
+
+=head1 LICENSE
+
+Copyright 2001, Aaron Straup Cope.
+
+This is free software, you may use it and distribute it under the
+same terms as Perl itself.
+
+=cut

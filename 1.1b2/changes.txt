@@ -1,0 +1,50 @@
+Changes for eatdrinkfeelgood 1.1b2 DTD - Tue Nov 19, 2002
+
+     - Removed 'custom' element
+
+     - Removed 'local.default.version;' entity
+
+     - Removed 'date' element
+
+     - Removed 'year' element
+
+     - Removed 'month' element
+
+     - Removed 'day' element
+
+     - Replaced 'amount' element with 'quantity'
+
+     - Replaced 'src' element with 'extref'
+
+     - Modified content models to remove 'not determinist'
+       errors
+
+     - Modified content model for elements that required
+       a 'date' element to require a 'dc:date' element
+
+     - Modified content model for 'date' element to 
+       require a 'timestamp' attribute in ISO...
+
+     - Modified content model for 'category' element
+
+     - Modified 'image' element to require 'extref' or
+       'bin64b' element
+
+     - Modified 'author' element to accept option 'extref'
+       element 
+
+     - Added namespace declarations
+
+     - Added Dublin Core 'date' element
+
+     - Added 'requirements' element
+
+     - Added 'equipement' element
+
+     - Added 'device' element
+
+     - Added 'extref' element
+
+     - Added 'bin64b' element
+
+     - Updated license.

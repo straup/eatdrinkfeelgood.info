@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE eatdrinkfeelgood PUBLIC "-//Aaron Straup Cope//DTD Eatdrinkfeelgood 1.1//EN//XML"
+ "http://www.eatdrinkfeelgood.info/1.1/eatdrinkfeelgood.dtd">
+<eatdrinkfeelgood xmlns="http://www.eatdrinkfeelgood.info/1.1/ns" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <recipe>
+    <name>
+      <common>Graham Cracker Crust</common>
+    </name>
+    <source>
+      <publication xlink:href = "http://www.nytimes.com/2002/11/20/dining/201YREX.html">
+	<name>
+	  <common>New York Times</common>
+	</name>
+	<dc:date>20021120T05:00:00 -0500</dc:date>
+      </publication>
+    </source>
+    <requirements>
+      <ingredients>
+	<ing>
+	  <amount>
+	    <quantity><n type="frac" value="1 1/2" /></quantity>
+	    <measure>
+	      <unit content="cup"/>
+	    </measure>
+	  </amount>
+	  <item>graham cracker crumbs</item>
+	</ing>
+	<ing>
+	  <amount>
+	    <quantity><n type = "frac" value = "1/4" /></quantity>
+	    <measure>
+	      <unit content="cup"/>
+	    </measure>
+	  </amount>
+	  <item>sugar</item>
+	</ing>
+	<ing>
+	  <amount>
+	    <quantity><n type = "frac" value = "1/3" /></quantity>
+	    <measure>
+	      <unit content="cup"/>
+	    </measure>
+	  </amount>
+	  <item>butter</item>
+	  <detail>melted</detail>
+	</ing>
+      </ingredients>
+    </requirements>
+    <directions>
+      <step>
+	<para>Heat oven to 350 degrees.</para>
+      </step>
+      <step>
+	<para>In a medium bowl, mix graham cracker crumbs, sugar and butter until combined.</para>
+      </step>
+      <step>
+	<para>Press onto bottom and 1 inch up side of a 9-inch springform pan.</para>
+      </step>
+      <step>
+	<para>Bake until set but not brown, 6 to 8 minutes. Remove from oven, and cool.</para>
+      </step>
+    </directions>
+  </recipe>
+  <revhistory>
+    <rev>
+      <version>1.0</version>
+      <author content-type="html">
+       <extref xlink:href='http://www.aaronstraupcope.com/whois"'
+	       xlink:title="asc"/>
+      </author>
+      <dc:date>20021121T13:43:00 -0500</dc:date>
+      <changes>
+	<para>Initial revision</para>
+      </changes>
+    </rev>
+  </revhistory>
+</eatdrinkfeelgood>

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3c.org/rdfs/"
+  xmlns:dc="http://dublincore.org#"
+  xmlns:e="http://eatdrinkfeelgood.info#">
+
+
+ <rdf:Description rdf:about = "http://eatdrinkfeelgood.info/misc/test2/rdf">
+  <rdf:type rdf:resource ="http://eatdrinkfeelgood.info/rdf/document#recipe" />
+
+  <dc:title>Runny Powder Balls</dc:title>
+
+  <e:source>
+   <rdf:Seq>
+    <rdf:li>
+     <e:individual rdf:about="http://aaronstraupcope.com#">
+     <e:firstname>Aaron</e:firstname>
+     <e:lastname>Cope</e:lastname>
+    </e:individual>
+    </rdf:li>
+    <rdf:li>
+     <e:publication rdf:about = "http://www.nytimes.com#">
+      <e:uri>http://www.nytime.com/food/2003/06/02/RUNN.html</e:uri>
+     </e:publication>
+    </rdf:li>
+   </rdf:Seq>
+  </e:source>
+
+   <e:ingredients>
+    <rdf:Seq>
+
+     <rdf:li>
+
+      <e:set rdf:ID = "set.foo">
+       <dc:title>Poit!</dc:title>
+       <e:contents>
+        <rdf:Seq>
+         <rdf:li>
+	  <rdf:Description 
+	       rdf:about = "http://eatdrinkfeelgood.info/rdf/foodstuff#baking powder">
+	   <rdf:type>
+	    <rdf:Description 
+	         rdf:about = "http://eatdrinkfeelgood.info#ing" />
+	   </rdf:type>
+	   <e:amount>
+	    <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/int#1" />
+	   </e:amount>
+
+	   <e:measure>
+	    <e:unit rdf:about = "http://eatdrinkfeelgood.info/rdf/measure#teaspoon" />
+	   </e:measure>
+	  </rdf:Description>
+         </rdf:li>
+	 <rdf:li>
+	  <rdf:Description 
+	       rdf:about = "http://eatdrinkfeelgood.info/rdf/foodstuff#egg">
+	   <rdf:type>
+	    <rdf:Description 
+	         rdf:about = "http://eatdrinkfeelgood.info#ing" />
+	   </rdf:type>
+	   <e:amount>
+	    <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/int#1" />
+	   </e:amount>
+	   <e:measure>
+	    <e:unit 
+	       rdf:about = "http://eatdrinkfeelgood.info/rdf/measure/custom#really big" />
+	   </e:measure>
+           <e:detail>
+	    but not too runny
+	   </e:detail>  
+	  </rdf:Description>
+	 </rdf:li>
+        </rdf:Seq>
+       </e:contents>
+      </e:set>	 
+     </rdf:li>
+     <rdf:li>
+      <rdf:Description 
+           rdf:about = "http://eatdrinkfeelgood.info/rdf/foodstuff#baking powder">
+	   <rdf:type>
+	    <rdf:Description 
+	         rdf:about = "http://eatdrinkfeelgood.info#ing" />
+	   </rdf:type>
+       <e:amount>
+        <e:range>
+         <e:lower>
+          <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/int#4" />
+         </e:lower>
+         <e:upper>
+          <e:num rdf:about = "http://eatdrinkfeelgood.info/rdf/number/fraction#4 1/2" />
+         </e:upper>
+        </e:range>
+       </e:amount>
+       <e:measure>
+        <e:unit rdf:about = "http://eatdrinkfeelgood.info/rdf/measure#teaspoon" />
+       </e:measure>
+      </rdf:Description>
+     </rdf:li>
+    </rdf:Seq>
+   </e:ingredients>
+
+ </rdf:Description>
+
+</rdf:RDF>
+

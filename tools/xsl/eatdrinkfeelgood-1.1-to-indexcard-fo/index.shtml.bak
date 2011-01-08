@@ -1,0 +1,121 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-ca">
+<head profile="http://www.eatdrinkfeelgood.info/profile">
+<title>eatdrinkfeelgood.info - xsl tools | eatdrinkfeelgood 1.1 to index-card formatting objects</title>
+<style media="screen" type="text/css" title="screen">
+   /* <![CDATA[ */
+   @import url(/css/shared/screen.css);
+   @import url(/css/shared/screen-splash.css);
+   @import url(/css/screen.css);
+   /* ]]> */
+  </style>
+<link rel="edfg.references" title="Eatdrinkfeelgood 1.0 Specification" href="/1.1" type="text/html" />
+
+<link rel="edfg.references" title="Extensible Stylesheet Language" href="http://www.w3.org/Style/XSL/" type="text/html" />
+
+<link rel="edfg.references" title="The xsltproc command line processor" href="http://xmlsoft.org/XSLT/xsltproc2.html" type="text/html" />
+
+<link rel="edfg.references" title="The Apache XML Formatting Objects Processor" href="http://xml.apache.org/fop" type="text/html" />
+
+<link rel="Up" title="Eatdrinkfeelgood XSL Tools" href="/tools/xsl" type="text/html" />
+
+<link rel="Start" title="Eatdrinkfeelgood homepage" href="/" type="text/html" />
+
+<link rel="edfg.current release" title="Eatdrinkfeelgood current release" href="/1.1" type="text/html" />
+
+<link rel="copyright" title="Eatdrinkfeelgood license" href="/license" type="text/html" />
+
+<link rev="made" title="Aaron Straup Cope" href="http://www.aaronstraupcope.com/whois" type="text/html" />
+</head>
+<body>
+<h1>these are eatdrinkfeelgood<span class="subsect-title">xsl tools</span>
+</h1>
+<div class="sect">
+   <h2>eatdrinkfeelgood 1.1 to index-card formatting objects</h2>
+
+   <p>This stylesheet converts a recipe document conforming to the eatdrinkfeelgood 1.1 DTD into an XSL-FO document suitable for generating an index card.</p>
+
+
+   <p>The current version of the <span class="stylesheet">eatdrinkfeelgood 1.1 to index-card formatting objects</span> stylesheet is <span class="version">0.93</span>.</p>
+
+   <p><span class="reldate">released January 03, 2003</span></p>
+
+   <h3>source</h3>
+    <a href="/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-0.93.tar.gz">www.eatdrinkfeelgood/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-0.93.tar.gz</a>
+
+   <h3>example</h3>
+   <pre>
+# First generate an XSL-FO document from your recipe
+
+xsltproc -o <span style="color:brown;">/path/to/recipe.fo</span> \
+ /path/to/eatdrinkfeelgood-1.1-to-indexcard-fo.xsl \
+ /path/to/your/recipe.xml
+
+# Next generate a PDF file using the Fop processor
+
+fop <span style="color:brown;">/path/to/recipe.fo</span> \
+ -pdf /path/to/recipe.pdf 
+   </pre>
+
+   <h3>step-by-step</h3>
+
+   <ol>
+<li>the recipe <a href="/examples/1.1/recipes/sweet-potato-cheesecake.xml">sweet-potato-cheesecake.xml</a>
+</li>
+
+    <li>is transformed using the xsltproc program and the <a href=".">eatdrinkfeelgood-1.1-to-indexcard-fo</a> stylesheet</li>
+
+    <li>and creates a new document named <a href="/misc/sweet-potato-cheesecake.fo">sweet-potato-cheesecake.fo</a>
+</li>
+
+    <li>which is used by the Fop program to create a new PDF file named <a href="/misc/sweet-potato-cheesecake.pdf">sweet-potato-cheesecake.pdf</a>
+</li>
+   </ol>
+<h3>parameters</h3>
+
+   <ul class="flush-left">
+<li>
+     <strong>size</strong>
+     <p>The default dimensions for index cards are 5 inches by 7 inches. If the value of the <strong>size</strong> parameter is <em>small</em> the dimensions will be reduced to 4 inches by 6 inches.</p>
+    </li>
+    <li>
+     <strong>font-size</strong>
+     <p>Specify the default font size for the text on the index card. All formatting is scaled using this value and the <code>em</code> property. The default font size is <code>8pt</code>.</p>
+    </li>
+   </ul>
+
+<h3>notes</h3>
+
+   <a href="/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-notes.txt">eatdrinkfeelgood-1.1-to-indexcard-fo-notes.txt</a>
+
+   <h3>changes</h3>
+
+   <a href="/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-changes.txt">eatdrinkfeelgood-1.1-to-indexcard-fo-changes.txt</a>
+
+   </div>
+<div class="sect">
+
+   <h2>previous releases</h2>
+   <ul class="flush-left">
+    <li><a href = "/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-0.92.tar.gz">eatdrinkfeelgood-1.1-to-indexcard-fo-0.92.tar.gz</a> <em>(2003-01-01)</em></li>
+<li>
+<a href="/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-v0.91.xsl">eatdrinkfeelgood-1.1-to-indexcard-fo-v0.91.xsl</a> <em>(2002-12-31)</em>
+</li>
+    <li>
+<a href="/src/xsl/eatdrinkfeelgood-1.1-to-indexcard-fo-v0.9.xsl">eatdrinkfeelgood-1.1-to-indexcard-fo-v0.9.xsl</a> <em>(2002-12-30)</em>
+</li>
+   </ul>
+</div>
+<div class="footer">
+   &gt;eatdrinkfeelgood.info<br><div class="by">by:<a href="http://www.aaronstraupcope.com">aaronstraupcope</a>
+</div>
+
+   <div class="copyright">
+    copyright &copy; <span class="copy-first">2001-</span><span class="copy-current">2003</span> aaron straup cope. all rights reserved
+    <br />
+    the eatdrinkfeelgood dtd is licensed under the <a href="http://creativecommons.org/licenses/by-sa/1.0">creative commons attribution-sharealike license</a>.
+   </div>
+  </div>
+</body>
+</html>

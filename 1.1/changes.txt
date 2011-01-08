@@ -1,0 +1,8 @@
+Changes for eatdrinkfeelgood 1.1 DTD - Thu Nov 29, 2002
+
+	- Modified content model for 'author/@content-type' to 
+	  allow 'html' or 'xhtml'
+
+	- Added 'html' NOTATION
+
+	- Added 'xhtml' NOTATION

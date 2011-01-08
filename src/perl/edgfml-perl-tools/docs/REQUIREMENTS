@@ -1,0 +1,32 @@
+# CPAN MODULES
+
+Apache
+Apache::Constants
+Apache::File
+Apache::Log
+Apache::URI
+
+Cache::FileCache [1] 
+
+Digest::MD5
+DirHandle
+
+File::Basename
+
+PDFLib
+
+XML::Generator
+XML::LibXML
+XML::LibXSLT
+XML::Parser::PerlSAX
+XML::XPath
+
+# NON-STANDARD MODULES
+
+XML::YAGenerator [2]
+
+# NOTES
+
+[1] Requires recent version of File::Spec. I'm not sure what the minimum is, but you need to make sure that the File::Spec->splitpath method is present. 
+
+[2] Subclasses XML::Generator (included in /lib/XML)

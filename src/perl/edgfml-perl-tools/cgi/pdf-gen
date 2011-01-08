@@ -1,0 +1,57 @@
+#!/usr/bin/perl 
+use strict;
+
+=pod
+
+=head1 NAME
+
+pdf-gen
+
+=head1 DESCRIPTION
+
+A CGI script to create an index-card size PDF document from one or more paths containing Eatdrinkfeelgood documents.
+
+=cut
+
+use CGI;
+use Eatdrinkfeelgood::PDF::IndexCard;
+
+use constant RECIPE_DIR => "/path/to/recipes/directory";
+
+{
+    &main();
+    exit;
+}
+
+sub main {
+
+    my $cgi  = CGI->new();
+    my $card = Eatdrinkfeelgood::PDF::IndexCard->new();
+
+    my $recipe = join("/",RECIPE_DIR,$cgi->param("recipe"));
+
+    print
+	$cgi->header("application/pdf"),
+	$card->to_string($recipe);
+
+    return 1;
+}
+
+=pod
+
+=head1 AUTHOR
+
+Aaron Straup Cope
+
+=head1 SEE ALSO 
+
+http://www.aaronland.net/food/edfgml
+
+=head1 LICENSE
+
+Copyright 2001, Aaron Straup Cope.
+
+This is free software, you may use it and distribute it under the
+same terms as Perl itself.
+
+=cut
